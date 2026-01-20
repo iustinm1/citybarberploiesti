@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery__item {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  span {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 1.5rem;
+    color: #fff;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    transition: opacity $transition-fast;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  &:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+
+    span {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as *;
+
+.reviews {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+  box-shadow: none;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.reviews-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 0 1.25rem;
+  mask-image: 
+    linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    ),
+    linear-gradient(
+      180deg,
+      #000 0%,
+      #000 85%,
+      transparent 100%
+    );
+  -webkit-mask-image: 
+    linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    ),
+    linear-gradient(
+      180deg,
+      #000 0%,
+      #000 85%,
+      transparent 100%
+    );
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  box-shadow: none;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  padding-inline: 1.5rem;
+  animation: reviews-scroll var(--scroll-duration, 28s) linear infinite;
+  will-change: transform;
+  box-shadow: none;
+}
+
+.review-card {
+  flex: 0 0 320px;
+}
+
+.review-card__stars {
+  display: flex;
+  gap: 0.15rem;
+}
+
+@keyframes reviews-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--scroll-distance, 50%)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track {
+    animation: none;
+  }
+}

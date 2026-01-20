@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: #475569;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.about__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

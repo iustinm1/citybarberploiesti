@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as *;
+
+.info-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: $radius-lg;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    margin-bottom: 0.2rem;
+    color: #475569;
+  }
+}
+
+.info-card__icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--bg-accent);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.service-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 1.5rem;
+  border-radius: $radius-lg;
+  transition: transform $transition-fast, border $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--bg-accent);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: var(--bg-accent);
+    font-weight: 700;
+  }
+}
+
+.review-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: $radius-lg;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+
+  p {
+    color: #475569;
+  }
+}

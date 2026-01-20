@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+
+.review-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+
+  label {
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    border-radius: $radius-sm;
+    font: inherit;
+    outline: none;
+    transition: border $transition-fast, box-shadow $transition-fast;
+
+    &:focus {
+      border-color: var(--bg-accent);
+      box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.2);
+    }
+  }
+}
+
+.rating-input {
+  display: flex;
+  gap: 0.4rem;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  label {
+    cursor: pointer;
+
+    .star {
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #d1d5db;
+      transition: transform $transition-fast, background $transition-fast;
+    }
+
+    &:hover .star,
+    &:hover ~ label .star {
+      background: #f59e0b;
+    }
+  }
+
+  input:checked + .star,
+  input:checked ~ label .star {
+    background: #f59e0b;
+  }
+}
+
+.form-success {
+  display: none;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+  padding: 1rem;
+  border-radius: $radius-sm;
+  margin-bottom: 1rem;
+}
+
+.form-note {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}

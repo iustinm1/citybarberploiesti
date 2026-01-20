@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+
+.services {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: $radius-xl;
+  padding: 2.5rem;
+  color: #fff;
+}
+
+.services__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--bg-accent);
+  }
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.services__note {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}

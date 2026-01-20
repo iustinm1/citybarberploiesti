@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --bg-dark: #{$color-bg-dark};
+  --bg-dark-2: #{$color-bg-dark-2};
+  --bg-accent: #{$color-accent};
+  --bg-accent-dark: #{$color-accent-dark};
+  --text-dark: #{$color-text-dark};
+  --text-muted: #{$color-text-muted};
+  --text-light: #{$color-text-light};
+  --text-white: #{$color-text-white};
+  --card-bg: #{$color-card-bg};
+  --border: #{$color-border};
+  --shadow: #{$shadow-lg};
+}
+
+body {
+  font-family: $font-family;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}

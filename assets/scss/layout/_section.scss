@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+
+.section {
+  padding: 5rem 0;
+}
+
+.section--white {
+  background: #fff;
+}
+
+.section--muted {
+  background: #f8fafc;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: 0.75rem;
+  }
+}
+
+.section__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--bg-accent);
+  }
+}

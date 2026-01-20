@@ -1,0 +1,31 @@
+$font-family: "Poppins", sans-serif;
+
+$color-bg-dark: #0f172a;
+$color-bg-dark-2: #1e293b;
+$color-accent: #b45309;
+$color-accent-dark: #92400e;
+
+$color-text-dark: #0f172a;
+$color-text-muted: #64748b;
+$color-text-light: #e2e8f0;
+$color-text-white: #ffffff;
+
+$color-card-bg: #ffffff;
+$color-border: #e2e8f0;
+
+$shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12);
+
+$radius-sm: 0.75rem;
+$radius-md: 0.85rem;
+$radius-lg: 1rem;
+$radius-xl: 1.5rem;
+
+$container-width: 1120px;
+$container-gutter: 2rem;
+
+$transition-fast: 0.2s ease;
+
+$breakpoints: (
+  "sm": 640px,
+  "md": 720px
+);

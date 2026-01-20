@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modal__content {
+  position: relative;
+  background: #0b0f1a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: min(900px, 90vw);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+
+  img {
+    border-radius: 0.75rem;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--bg-accent);
+  }
+}
+
+@include respond-max("md") {
+  .modal__close {
+    top: -40px;
+  }
+}

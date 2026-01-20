@@ -1,0 +1,6 @@
+@use "../abstracts/variables" as *;
+
+.container {
+  width: min(#{$container-width}, 100% - #{$container-gutter});
+  margin: 0 auto;
+}
